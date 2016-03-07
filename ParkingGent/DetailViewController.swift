@@ -46,7 +46,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
             
             if let mapView = self.mapView
             {
-                let location = CLLocationCoordinate2D(latitude: Double(detail.latitude!), longitude: Double(detail.longitude!))
+                let location = CLLocationCoordinate2D(latitude: detail.latitude!, longitude: detail.longitude!)
                 // Drop a pin
                 let dropPin = MKPointAnnotation()
                 dropPin.coordinate = location

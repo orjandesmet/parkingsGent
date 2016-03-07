@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 class ODSParking {
     
     var name : String?
-    var latitude : Float?
-    var longitude : Float?
+    var latitude : Double?
+    var longitude : Double?
     var address : String?
     var contactinfo : String?
     var parkingStatus : ODSParkingStatus?
-    var distance : Float = 0.0
     
     init(json: NSDictionary) {
         
@@ -25,12 +25,12 @@ class ODSParking {
             self.name = name
         }
         
-        if let latitude = json["latitude"] as? Float
+        if let latitude = json["latitude"] as? Double
         {
             self.latitude = latitude
         }
         
-        if let longitude = json["longitude"] as? Float
+        if let longitude = json["longitude"] as? Double
         {
             self.longitude = longitude
         }
@@ -53,6 +53,11 @@ class ODSParking {
         {
             self.parkingStatus = ODSParkingStatus(availableCapacity: 0, totalCapacity: 0)
         }
+    }
+    
+    func distance(location : CLLocation) -> Double
+    {
+        return sqrt(pow(location.coordinate.longitude - longitude!, 2.0) + pow(location.coordinate.latitude - latitude!, 2.0))
     }
     
 }

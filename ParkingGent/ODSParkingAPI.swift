@@ -7,23 +7,58 @@
 //
 
 import UIKit
+import MapKit
 
-class ODSParkingAPI: NSObject {
+class ODSParkingAPI: NSObject, CLLocationManagerDelegate {
 
     static let sharedInstance = ODSParkingAPI()
-    private override init() {}
+    private override init()
+    {
+        
+        if let dataSourceUri = NSUserDefaults.standardUserDefaults().valueForKey("dataSourceUri") as? String
+        {
+            self.dataSourceUri = dataSourceUri
+        }
+        else
+        {
+            dataSourceUri = "http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json"
+        }
+        super.init()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        loadData()
+    }
+    
+    var dataSourceUri : String {
+        
+        didSet {
+            loadData()
+            
+            NSUserDefaults.standardUserDefaults().setValue(dataSourceUri, forKey: "dataSourceUri")
+        }
+    }
     
     let parkingManager = ODSParkingManager()
+    let locationManager = CLLocationManager()
     
     func getParkings() -> [ODSParking]
     {
-        if (true) // if location
+        if let currentLocation = locationManager.location
         {
-            return parkingManager.getParkingsByDistance()
+            return parkingManager.getParkingsByDistance(currentLocation)
         }
         else
         {
             return parkingManager.getParkingsAlphabetically()
         }
+    }
+    
+    func loadData()
+    {
+        parkingManager.loadData(dataSourceUri)
     }
 }

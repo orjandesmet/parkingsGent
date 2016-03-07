@@ -71,6 +71,11 @@ class MasterViewController: UITableViewController {
         return false
     }
 
+    @IBAction func refreshPressed(sender: AnyObject) {
+        ODSParkingAPI.sharedInstance.loadData()
+        parkings = ODSParkingAPI.sharedInstance.getParkings()
+        tableView.reloadData()
+    }
 
 }
 

@@ -7,39 +7,42 @@
 //
 
 import UIKit
+import MapKit
 
 class ODSParkingManager: NSObject {
 
     var parkings = [ODSParking]()
     
-    override init()
+    func loadData(dataSourceUri : String)
     {
-        // TODO URL must be changeable
-        let endpoint = NSURL(string: "http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json")
-        let data = NSData(contentsOfURL: endpoint!)
+        parkings.removeAll()
         
-        do {
-            if let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray {
-                for parking in json
-                {
-                    if let parkingJson = parking as? NSDictionary
-                    {
-                        parkings += [ODSParking(json: parkingJson)]
+        if let endpoint = NSURL(string: dataSourceUri)
+        {
+            if let data = NSData(contentsOfURL: endpoint)
+            {
+                do {
+                    if let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSArray {
+                        for parking in json
+                        {
+                            if let parkingJson = parking as? NSDictionary
+                            {
+                                parkings += [ODSParking(json: parkingJson)]
+                            }
+                        }
                     }
-                }
+                } catch { print(error) }
             }
-        } catch {}
+        }
     }
     
-    func getParkingsByDistance() -> [ODSParking]
+    func getParkingsByDistance(location : CLLocation) -> [ODSParking]
     {
-        // TODO get current location and sort by distance
-        return parkings
+        return parkings.sort { $0.distance(location) < $1.distance(location) }
     }
     
     func getParkingsAlphabetically() -> [ODSParking]
     {
-        // TODO get parkings alphabetically
-        return parkings
+        return parkings.sort { $0.name! < $1.name! }
     }
 }
