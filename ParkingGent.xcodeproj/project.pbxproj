@@ -14,10 +14,10 @@
 		8F3B53101C8D999F00CDB2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B530F1C8D999F00CDB2BB /* Assets.xcassets */; };
 		8F3B53131C8D999F00CDB2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B53111C8D999F00CDB2BB /* LaunchScreen.storyboard */; };
 		8F3B531E1C8D99A000CDB2BB /* ParkingGentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B531D1C8D99A000CDB2BB /* ParkingGentTests.swift */; };
-		8F3B532E1C8D9A6C00CDB2BB /* ODSParkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */; };
-		8F3B532F1C8D9A6C00CDB2BB /* ODSParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */; };
-		8F3B53301C8D9A6C00CDB2BB /* ODSParkingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */; };
-		8F3B53311C8D9A6C00CDB2BB /* ODSParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */; };
+		8F3B534A1C8DED8E00CDB2BB /* ODSParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53461C8DED8E00CDB2BB /* ODSParking.swift */; };
+		8F3B534B1C8DED8E00CDB2BB /* ODSParkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53471C8DED8E00CDB2BB /* ODSParkingAPI.swift */; };
+		8F3B534C1C8DED8E00CDB2BB /* ODSParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53481C8DED8E00CDB2BB /* ODSParkingManager.swift */; };
+		8F3B534D1C8DED8E00CDB2BB /* ODSParkingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53491C8DED8E00CDB2BB /* ODSParkingStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +42,10 @@
 		8F3B53191C8D99A000CDB2BB /* ParkingGentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingGentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3B531D1C8D99A000CDB2BB /* ParkingGentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingGentTests.swift; sourceTree = "<group>"; };
 		8F3B531F1C8D99A000CDB2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingAPI.swift; sourceTree = "<group>"; };
-		8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParking.swift; sourceTree = "<group>"; };
-		8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingStatus.swift; sourceTree = "<group>"; };
-		8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingManager.swift; sourceTree = "<group>"; };
+		8F3B53461C8DED8E00CDB2BB /* ODSParking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODSParking.swift; path = ParkingGent/ODSParking.swift; sourceTree = SOURCE_ROOT; };
+		8F3B53471C8DED8E00CDB2BB /* ODSParkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODSParkingAPI.swift; path = ParkingGent/ODSParkingAPI.swift; sourceTree = SOURCE_ROOT; };
+		8F3B53481C8DED8E00CDB2BB /* ODSParkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODSParkingManager.swift; path = ParkingGent/ODSParkingManager.swift; sourceTree = SOURCE_ROOT; };
+		8F3B53491C8DED8E00CDB2BB /* ODSParkingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODSParkingStatus.swift; path = ParkingGent/ODSParkingStatus.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		8F3B53291C8D9A6C00CDB2BB /* API */ = {
 			isa = PBXGroup;
 			children = (
-				8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */,
+				8F3B53471C8DED8E00CDB2BB /* ODSParkingAPI.swift */,
 			);
 			name = API;
 			path = ../../ParkingsGent/ParkingsGent;
@@ -121,9 +121,9 @@
 		8F3B532D1C8D9A6C00CDB2BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */,
-				8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */,
-				8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */,
+				8F3B53461C8DED8E00CDB2BB /* ODSParking.swift */,
+				8F3B53481C8DED8E00CDB2BB /* ODSParkingManager.swift */,
+				8F3B53491C8DED8E00CDB2BB /* ODSParkingStatus.swift */,
 			);
 			name = Model;
 			path = ../../ParkingsGent/ParkingsGent;
@@ -248,12 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F3B532F1C8D9A6C00CDB2BB /* ODSParking.swift in Sources */,
-				8F3B53301C8D9A6C00CDB2BB /* ODSParkingStatus.swift in Sources */,
+				8F3B534D1C8DED8E00CDB2BB /* ODSParkingStatus.swift in Sources */,
+				8F3B534C1C8DED8E00CDB2BB /* ODSParkingManager.swift in Sources */,
 				8F3B530B1C8D999F00CDB2BB /* DetailViewController.swift in Sources */,
-				8F3B53311C8D9A6C00CDB2BB /* ODSParkingManager.swift in Sources */,
 				8F3B53091C8D999F00CDB2BB /* MasterViewController.swift in Sources */,
-				8F3B532E1C8D9A6C00CDB2BB /* ODSParkingAPI.swift in Sources */,
+				8F3B534A1C8DED8E00CDB2BB /* ODSParking.swift in Sources */,
+				8F3B534B1C8DED8E00CDB2BB /* ODSParkingAPI.swift in Sources */,
 				8F3B53071C8D999F00CDB2BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +444,7 @@
 				8F3B53241C8D99A000CDB2BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F3B53251C8D99A000CDB2BB /* Build configuration list for PBXNativeTarget "ParkingGentTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +453,7 @@
 				8F3B53271C8D99A000CDB2BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
