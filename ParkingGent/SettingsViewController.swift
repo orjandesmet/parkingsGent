@@ -30,6 +30,14 @@ class SettingsViewController: UIViewController {
         
         self.view.endEditing(true)
     }
+    @IBAction func resetButtonPressed(sender: AnyObject) {
+        
+        self.view.endEditing(true)
+        
+        ODSParkingAPI.sharedInstance.dataSourceUri = defaultUri
+        
+        dataSourceText.text = defaultUri
+    }
 
     /*
     // MARK: - Navigation

@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+let defaultUri = "http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json"
+
 class ODSParkingAPI: NSObject, CLLocationManagerDelegate {
 
     static let sharedInstance = ODSParkingAPI()
@@ -21,7 +23,7 @@ class ODSParkingAPI: NSObject, CLLocationManagerDelegate {
         }
         else
         {
-            dataSourceUri = "http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json"
+            dataSourceUri = defaultUri
         }
         super.init()
         
