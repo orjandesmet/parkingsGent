@@ -22,8 +22,18 @@ class ParkingGentTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let parkingManager = ODSParkingManager()
+        for parking in parkingManager.getParkingsByDistance()
+        {
+            assert(parking.name != nil)
+            assert(parking.address != nil)
+            assert(parking.latitude != nil)
+            assert(parking.longitude != nil)
+            assert(parking.contactinfo != nil)
+            assert(parking.parkingStatus != nil)
+            assert(parking.parkingStatus!.totalCapacity != nil)
+            assert(parking.parkingStatus!.availableCapacity != nil)
+        }
     }
     
     func testPerformanceExample() {

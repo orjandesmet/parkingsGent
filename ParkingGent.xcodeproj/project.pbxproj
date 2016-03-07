@@ -14,6 +14,10 @@
 		8F3B53101C8D999F00CDB2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B530F1C8D999F00CDB2BB /* Assets.xcassets */; };
 		8F3B53131C8D999F00CDB2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3B53111C8D999F00CDB2BB /* LaunchScreen.storyboard */; };
 		8F3B531E1C8D99A000CDB2BB /* ParkingGentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B531D1C8D99A000CDB2BB /* ParkingGentTests.swift */; };
+		8F3B532E1C8D9A6C00CDB2BB /* ODSParkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */; };
+		8F3B532F1C8D9A6C00CDB2BB /* ODSParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */; };
+		8F3B53301C8D9A6C00CDB2BB /* ODSParkingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */; };
+		8F3B53311C8D9A6C00CDB2BB /* ODSParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		8F3B53191C8D99A000CDB2BB /* ParkingGentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingGentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3B531D1C8D99A000CDB2BB /* ParkingGentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingGentTests.swift; sourceTree = "<group>"; };
 		8F3B531F1C8D99A000CDB2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingAPI.swift; sourceTree = "<group>"; };
+		8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParking.swift; sourceTree = "<group>"; };
+		8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingStatus.swift; sourceTree = "<group>"; };
+		8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,11 @@
 		8F3B53051C8D999F00CDB2BB /* ParkingGent */ = {
 			isa = PBXGroup;
 			children = (
+				8F3B53351C8DA1F400CDB2BB /* View */,
+				8F3B53341C8DA1EA00CDB2BB /* Controller */,
+				8F3B53291C8D9A6C00CDB2BB /* API */,
+				8F3B532D1C8D9A6C00CDB2BB /* Model */,
 				8F3B53061C8D999F00CDB2BB /* AppDelegate.swift */,
-				8F3B53081C8D999F00CDB2BB /* MasterViewController.swift */,
-				8F3B530A1C8D999F00CDB2BB /* DetailViewController.swift */,
 				8F3B530C1C8D999F00CDB2BB /* Main.storyboard */,
 				8F3B530F1C8D999F00CDB2BB /* Assets.xcassets */,
 				8F3B53111C8D999F00CDB2BB /* LaunchScreen.storyboard */,
@@ -97,6 +107,42 @@
 				8F3B531F1C8D99A000CDB2BB /* Info.plist */,
 			);
 			path = ParkingGentTests;
+			sourceTree = "<group>";
+		};
+		8F3B53291C8D9A6C00CDB2BB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8F3B53281C8D9A6C00CDB2BB /* ODSParkingAPI.swift */,
+			);
+			name = API;
+			path = ../../ParkingsGent/ParkingsGent;
+			sourceTree = "<group>";
+		};
+		8F3B532D1C8D9A6C00CDB2BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F3B532A1C8D9A6C00CDB2BB /* ODSParking.swift */,
+				8F3B532B1C8D9A6C00CDB2BB /* ODSParkingStatus.swift */,
+				8F3B532C1C8D9A6C00CDB2BB /* ODSParkingManager.swift */,
+			);
+			name = Model;
+			path = ../../ParkingsGent/ParkingsGent;
+			sourceTree = "<group>";
+		};
+		8F3B53341C8DA1EA00CDB2BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F3B53081C8D999F00CDB2BB /* MasterViewController.swift */,
+				8F3B530A1C8D999F00CDB2BB /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8F3B53351C8DA1F400CDB2BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3B532F1C8D9A6C00CDB2BB /* ODSParking.swift in Sources */,
+				8F3B53301C8D9A6C00CDB2BB /* ODSParkingStatus.swift in Sources */,
 				8F3B530B1C8D999F00CDB2BB /* DetailViewController.swift in Sources */,
+				8F3B53311C8D9A6C00CDB2BB /* ODSParkingManager.swift in Sources */,
 				8F3B53091C8D999F00CDB2BB /* MasterViewController.swift in Sources */,
+				8F3B532E1C8D9A6C00CDB2BB /* ODSParkingAPI.swift in Sources */,
 				8F3B53071C8D999F00CDB2BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParkingGent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orjandesmet.ParkingGent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParkingGent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orjandesmet.ParkingGent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
