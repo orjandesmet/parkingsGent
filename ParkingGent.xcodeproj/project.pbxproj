@@ -20,6 +20,7 @@
 		8F3B534D1C8DED8E00CDB2BB /* ODSParkingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53491C8DED8E00CDB2BB /* ODSParkingStatus.swift */; };
 		8F3B534F1C8E0D8300CDB2BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B534E1C8E0D8300CDB2BB /* SettingsViewController.swift */; };
 		8F3B53531C8E111900CDB2BB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3B53521C8E111900CDB2BB /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8F3B53551C8EA90B00CDB2BB /* ODSParkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B53541C8EA90B00CDB2BB /* ODSParkingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8F3B53491C8DED8E00CDB2BB /* ODSParkingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODSParkingStatus.swift; path = ParkingGent/ODSParkingStatus.swift; sourceTree = SOURCE_ROOT; };
 		8F3B534E1C8E0D8300CDB2BB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8F3B53521C8E111900CDB2BB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8F3B53541C8EA90B00CDB2BB /* ODSParkingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODSParkingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		8F3B53351C8DA1F400CDB2BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8F3B53541C8EA90B00CDB2BB /* ODSParkingCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3B53551C8EA90B00CDB2BB /* ODSParkingCell.swift in Sources */,
 				8F3B534D1C8DED8E00CDB2BB /* ODSParkingStatus.swift in Sources */,
 				8F3B534C1C8DED8E00CDB2BB /* ODSParkingManager.swift in Sources */,
 				8F3B530B1C8D999F00CDB2BB /* DetailViewController.swift in Sources */,

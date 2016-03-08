@@ -38,9 +38,9 @@ class ODSParkingAPI: NSObject, CLLocationManagerDelegate {
     var dataSourceUri : String {
         
         didSet {
-            loadData()
-            
             NSUserDefaults.standardUserDefaults().setValue(dataSourceUri, forKey: "dataSourceUri")
+            
+            loadData()
         }
     }
     

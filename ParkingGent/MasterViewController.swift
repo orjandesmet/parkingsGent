@@ -55,15 +55,11 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-// TODO can move to specific cell
-        let parking = parkings[indexPath.row]
-        cell.textLabel!.text = parking.name
-        cell.detailTextLabel!.text = "\(parking.parkingStatus!.availableCapacity!)"
         
-        let percentage = CGFloat(parking.parkingStatus!.availableCapacity!) / CGFloat(parking.parkingStatus!.totalCapacity!)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ODSParkingCell
         
-        cell.detailTextLabel!.textColor = UIColor(red: 1.0 - percentage, green: percentage, blue: 0.0, alpha: 1.0)
+        cell.fillParkingValues(parkings[indexPath.row])
+        
         return cell
     }
 
